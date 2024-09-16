@@ -1,16 +1,12 @@
-# Update tool for Mac Applications at the Sulpher Springs School District 
+# Update tool for Mac Applications at the Sulphur Springs School District 
 This Tool will not update the OS version just a handfull of apps that are listed bellow 
 
 ## How to run:
 To run this script paste the command below into the terminal with a user account with admin privileges  
-### How to run with a non privileged user:
-Run su and the username of an admin user ex: su admin  
-Then enter in the password in for the user you have just typed in
-you will also need to type exit in the terminal once the script is complete 
 
 
 ```
-curl -O https://raw.githubusercontent.com/DominicVillaniSSSD/update/main/update.sh && chmod +x update.sh && sudo ./update.sh
+curl -O http://10.9.2.234:3000/dom/SSSDUpdate/raw/branch/main/update.sh && chmod +x update.sh && sudo ./update.sh
 ```
 
 ### **This will update these apps:**  
@@ -27,5 +23,3 @@ smart_notebook 21.1 (For older MacOS Versions [Big Sur, Catalina])
 
 
 ## *Note this script is only validated to work in MacOS Catalina and up. Some of the Software included in this script is version specific and may need to be changed to work with older version of MacOS.  
-
-This Project is open free and open source feel free to fork or redistribute

@@ -2,12 +2,13 @@
 source setup.sh
 
 install_zip(){
-    local zip_file=$1
-    echo -e "${YELLOW}Unzipping $zip_file...${NC}"
-    unzip -qq "$zip_file" -d "/tmp/unzipped_content"  # Using -qq for quieter output
-    process_file "/tmp/unzipped_content"
-    rm "$zip_file"
-    echo -e "${DARK_GREEN}Installation of $zip_file complete${NC}"
+    local file=$1
+    local unzipped_folder="/tmp/$(basename "$file" .zip)"
+    echo -e "${YELLOW}Unzipping $file to $unzipped_folder...${NC}"
+    unzip -qq "$file" -d "$unzipped_folder"
+    for unzipped_file in "$unzipped_folder"/*; do
+        process_file "$unzipped_file"
+    done
 }
 
 # Function to handle installation of .pkg files
@@ -84,12 +85,7 @@ process_file() {
     local file=$1
     echo -e "${YELLOW}Processing file: $file${NC}"  # Debug statement
     if  [[ "$file" == *.zip ]]; then
-        local unzipped_folder="/tmp/$(basename "$file" .zip)"
-        echo -e "${YELLOW}Unzipping $file to $unzipped_folder...${NC}"
-        unzip "$file" -d "$unzipped_folder"
-        for unzipped_file in "$unzipped_folder"/*; do
-            process_file "$unzipped_file"
-        done
+        install_zip "$file"
     elif [[ "$file" == *.dmg ]]; then
         install_dmg "$file"
     elif [[ "$file" == *.pkg ]]; then
