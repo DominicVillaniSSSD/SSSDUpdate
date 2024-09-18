@@ -6,7 +6,7 @@ To run this script paste the command below into the terminal with a user account
 
 
 ```
-curl -O http://10.9.2.234:3000/dom/SSSDUpdate/raw/branch/main/update.sh && chmod +x update.sh && sudo ./update.sh
+curl -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/main/update.sh && chmod +x update.sh && sudo ./update.sh
 ```
 
 ### **This will update these apps:**  
