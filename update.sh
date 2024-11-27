@@ -22,7 +22,7 @@ Start_From_Server() {
     cd $TEMP_DIR
 
     # Set the branch
-    branch="testing"
+    branch="main"
 
     # Download necessary scripts
     echo -e "${YELLOW}Downloading scripts...${NC}"
