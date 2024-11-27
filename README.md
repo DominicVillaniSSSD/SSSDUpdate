@@ -6,14 +6,15 @@ To run this script paste the command below into the terminal with a user account
 
 
 ```
-curl -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/main/update.sh && chmod +x update.sh && sudo ./update.sh
+curl -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/main/update.sh && chmod +x update.sh && sudo ./update.sh
 ```
 
 ### **This will update these apps:**  
 Zoom (latest release)  
-Chrome (latest release)  
+Chrome (latest release for your verison of MacOS) 
 Google Drive (latest release)  
 crisis go (latest release)  
+onyx (latest release for your verison of MacOS)
 ###### **Version Spesific** 
 Air server 7.2.7  
 app_Cleaner 3.6.8  
@@ -22,4 +23,10 @@ smart_notebook 24.0.240.1 (For newer MacOS versions) or
 smart_notebook 21.1 (For older MacOS Versions [Big Sur, Catalina])  
 
 
-## *Note this script is only validated to work in MacOS Catalina and up. Some of the Software included in this script is version specific and may need to be changed to work with older version of MacOS.  
+## *Note this script is only validated to work in MacOS Catalina and up. Some of the Software included in this script is version specific and may need to be changed to work with older version of MacOS. 
+
+### Purge Smart Technologies:  
+
+```
+curl -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/main/cleanup.sh && chmod +x cleanup.sh && sudo ./cleanup.sh
+```

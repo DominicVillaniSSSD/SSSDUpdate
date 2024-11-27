@@ -1,6 +1,6 @@
 #!/bin/bash
 source setup.sh
-
+source curl.sh
 install_zip(){
     local file=$1
     local unzipped_folder="/tmp/$(basename "$file" .zip)"
@@ -94,5 +94,31 @@ process_file() {
         move_app "$file"
     else
         echo -e "${RED}File $file is neither a .dmg, .pkg, .app, nor a .zip file.${NC}"
+    fi
+}
+
+install_application_from_url() {
+    local app_url=$1
+
+    if [[ "$app_url" == "skip" ]]; then
+        echo -e "${YELLOW}Skipping application installation...${NC}"
+        return
+    fi
+    
+    local file_name=$(basename "${app_url%%\?*}")  # Strip query parameters from the URL
+    local temp_file="/tmp/$file_name"
+
+    echo -e "${YELLOW}Downloading application from URL: $app_url...${NC}"
+    curl -L -o "$temp_file" "$app_url"
+
+    if [[ -f "$temp_file" ]]; then
+        echo -e "${GREEN}Download successful. Installing application...${NC}"
+        process_file "$temp_file"
+        if [[ "$temp_file" == *.zip ]]; then
+            rm -r "/tmp/$(basename "$temp_file" .zip)"  # Remove unzipped directory
+        fi
+        rm "$temp_file"  # Remove the original downloaded file
+    else
+        echo -e "${RED}Failed to download the application.${NC}"
     fi
 }
