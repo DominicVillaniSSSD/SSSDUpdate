@@ -26,11 +26,11 @@ Start_From_Server() {
 
     # Download necessary scripts
     echo -e "${YELLOW}Downloading scripts...${NC}"
-    curl -L -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/$branch/curl.sh #has download links for applications
-    curl -L -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/$branch/install_handlers.sh #has instructions for how to install diffrent types of installers
-    curl -L -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/$branch/logo.sh #has logos for SSSD and Finished and fentions to call them 
-    curl -L -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/$branch/setup.sh #has the colors and functions to check the architecture and os versions
-    curl -L -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/$branch/choice.sh #has the functions to select applications
+    curl -L -O http://10.9.1.50:3000/dom/SSSDUpdate/raw/branch/$branch/curl.sh #has download links for applications
+    curl -L -O http://10.9.1.50:3000/dom/SSSDUpdate/raw/branch//$branch/install_handlers.sh #has instructions for how to install diffrent types of installers
+    curl -L -O http://10.9.1.50:3000/dom/SSSDUpdate/raw/branch/$branch/logo.sh #has logos for SSSD and Finished and fentions to call them 
+    curl -L -O http://10.9.1.50:3000/dom/SSSDUpdate/raw/branch/$branch/setup.sh #has the colors and functions to check the architecture and os versions
+    curl -L -O http://10.9.1.50:3000/dom/SSSDUpdate/raw/branch/$branch/choice.sh #has the functions to select applications
 
     source setup.sh
     source install_handlers.sh
@@ -39,7 +39,14 @@ Start_From_Server() {
     source choice.sh
 
     print_logo
-    echo "this is the $branch branch"
+
+    if [ "$branch" == "testing" ]; then
+        echo -e "${RED}this is the $branch branch${NC}"
+    elif [ "$branch" == "main" ]; then
+        echo -e "${GREEN}this is the $branch branch${NC}"
+    else
+        echo -e "${YELLOW}this is the $branch branch${NC}"
+    fi
 
     check_architecture
     check_macos_version
@@ -70,6 +77,9 @@ Start_From_Local() {
 
 
 Start_From_Server
+
+
+
 
 first_choice
 
