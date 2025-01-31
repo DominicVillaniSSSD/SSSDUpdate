@@ -9,7 +9,7 @@ zoom_url="https://zoom.us/client/latest/Zoom.pkg"
 zoom_arm64_url="https://zoom.us/client/latest/Zoom.pkg?archType=arm64" 
 
 #Version specific 
-smart_notebook_url="https://downloads.smarttech.com/software/education/24.0/mac/24.0.240.1/smart24-0-web.dmg"
+smart_notebook_url="https://downloads.smarttech.com/software/education/24.1/mac/24.1.228.0/smart24-1-web.dmg"
 smart_notebook22_1_url="https://downloads.smarttech.com/software/education/22.1/mac/22.1.496.0/smart22-1-web.dmg"
 air_server_url="https://dl.airserver.com/mac/AirServer-7.2.7.dmg"
 app_cleaner_url="https://freemacsoft.net/downloads/AppCleaner_3.6.8.zip"
@@ -34,3 +34,40 @@ onyx_monterey_url="https://www.titanium-software.fr/download/12/OnyX.dmg"
 onyx_ventura_url="https://www.titanium-software.fr/download/13/OnyX.dmg"
 onyx_sonoma_url="https://www.titanium-software.fr/download/14/OnyX.dmg"
 onyx_sequoia_url="https://www.titanium-software.fr/download/15/OnyX.dmg"
+
+
+#Hosted on the SSSD server
+visualizer_url="skip"
+#MS Office
+#MS Word URLs for different macOS versions
+word_url="skip"
+word_el_capitan_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.16.20101200_Installer.pkg"
+word_sierra_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.30.19101301_Installer.pkg"
+word_high_sierra_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.43.20110804_Installer.pkg"
+word_mojave_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.54.21101001_Installer.pkg"
+word_catalina_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.66.22101101_Installer.pkg"
+word_big_sur_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.77.23091703_Installer.pkg"
+word_monterey_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.89.24091630_Installer.pkg"
+word_ventura_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.92.24120731_Installer.pkg"
+
+#MS Excel URLs for different macOS versions
+excel_url="skip"
+excel_el_capitan_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_16.16.20101200_Installer.pkg"
+excel_sierra_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_16.30.19101301_Installer.pkg"
+excel_high_sierra_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_16.43.20110804_Installer.pkg"
+excel_mojave_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_16.54.21101001_Installer.pkg"
+excel_catalina_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_16.66.22101101_Installer.pkg"
+excel_big_sur_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_16.77.23091703_Installer.pkg"
+excel_monterey_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_16.89.24091630_Installer.pkg"
+excel_ventura_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_16.92.24120731_Installer.pkg"
+
+#MS PowerPoint URLs for different macOS versions
+powerpoint_url="skip"
+powerpoint_el_capitan_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.16.20101200_Installer.pkg"
+powerpoint_sierra_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.30.19101301_Installer.pkg"
+powerpoint_high_sierra_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.43.20110804_Installer.pkg"
+powerpoint_mojave_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.54.21101001_Installer.pkg"
+powerpoint_catalina_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.66.22101101_Installer.pkg"
+powerpoint_big_sur_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.77.23091703_Installer.pkg"
+powerpoint_monterey_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.89.24091630_Installer.pkg"
+powerpoint_ventura_url="https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.92.24120731_Installer.pkg"
