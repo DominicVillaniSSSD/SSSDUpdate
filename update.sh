@@ -27,6 +27,7 @@ Start_From_Server() {
     # Download necessary scripts
     echo -e "${YELLOW}Downloading scripts...${NC}"
     #https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/main/update.sh
+    #https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/main/curl.sh
     curl -L -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/$branch/curl.sh #has download links for applications
     curl -L -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/$branch/install_handlers.sh #has instructions for how to install diffrent types of installers
     curl -L -O https://raw.githubusercontent.com/DominicVillaniSSSD/SSSDUpdate/refs/heads/$branch/logo.sh #has logos for SSSD and Finished and fentions to call them 
