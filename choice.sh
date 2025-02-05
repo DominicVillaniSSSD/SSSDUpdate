@@ -48,11 +48,6 @@ start_smart_software(){
     sleep 0.5
 }
 
-restart_smart_software(){
-    stop_smart_software
-    start_smart_software
-}
-
 cleanupSmartSoftware() {
     stop_smart_software
     echo "Cleaning up SMART Technologies software..."
@@ -208,7 +203,6 @@ list_and_install_applications() {
 
     # Check if user wants to go back
     if [ "${choices[0]}" = "back" ]; then
-        clear
         first_choice
         return
     fi
@@ -305,11 +299,10 @@ more_options(){
     echo -e "${YELLOW}1. Add everyone to the printer group${NC}"
     echo -e "${CYAN}2. Stop SMART software${NC}"
     echo -e "${GREEN}3. Start SMART software${NC}" 
-    echo -e "${BLUE}4. Restart SMART software${NC}"
-    echo -e "${MAGENTA}5. Main Menu${NC}"
-    echo -e "${RED}6. Exit${NC}"
+    echo -e "${MAGENTA}4. Main Menu${NC}"
+    echo -e "${RED}5. Exit${NC}"
     
-    read -p "Enter your choice (1-6): " choice
+    read -p "Enter your choice (1-5): " choice
     
     case $choice in
         1)
@@ -331,12 +324,7 @@ more_options(){
             clear
             first_choice
             ;;
-        5)  
-            clear
-            restart_smart_software
-            more_options
-            ;;
-        6)
+        5)
             echo "Exiting..."
             exit 0
             ;;
